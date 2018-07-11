@@ -1,4 +1,8 @@
 <div class='modClass'>
+    <!-- 
+    This div holds inputs for new tasks, mod1 and mod2 are IDENTICAL except for their name, this doesnt have to
+    be the case, I simply did to make it easier for me
+    -->
     <span>ID:
       <input type='number' [(ngModel)]='ID' placeholder='0'>
     </span>
@@ -8,14 +12,21 @@
     <span>Description: 
       <input type='text' [(ngModel)]='description' placeholder='Enter a description'>
     </span>
-    <span><button class='submitButtonClass' (click)='sendItem(ID, name, description); getItems();'>Submit New Item</button></span>
+    <!-- 
+      invokes the function sendItem with the ID, name, and description passing to it, also invokes getItems function to grab the list
+      and display it
+    -->
+    <span><button class='submitButtonClass' (click)='sendItem(ID, name, description); getItems()'>Submit New Item</button></span>
   </div>
   
   <div class='dataClass'>
+    <!-- Shows each item, in a ul, that is in the current array-->
     <h3>Current Items</h3>
     <ul>
       <li *ngFor='let x of items; let i = index'>
+        <!-- This doesnt have to be a list. It can be in a select, table, div, anything you want. -->
         {{ i + 1 }}) ID: {{ x.ID }} -- Name: {{ x.name }} => Description: {{ x.description}}
       </li>
     </ul>
   </div>
+  
