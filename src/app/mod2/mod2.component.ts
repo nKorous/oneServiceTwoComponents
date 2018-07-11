@@ -39,4 +39,12 @@ export class Mod2Component implements OnInit {
     this.items = this._srv.getAllItems()
   }
 
+  saveToLocalStorage(){
+    this._srv.toLocalStorage(this.items)
+  }
+
+  getFromLocalStorage(){
+    this.items = this._srv.fromLocalStorage()
+  }
+
 }

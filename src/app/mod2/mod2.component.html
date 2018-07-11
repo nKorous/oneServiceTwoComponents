@@ -1,4 +1,5 @@
 <div class='modClass'>
+    <span class='titleClass'>Mod2.html.component</span><br>
     <!-- 
     This div holds inputs for new tasks, mod1 and mod2 are IDENTICAL except for their name, this doesnt have to
     be the case, I simply did to make it easier for me
@@ -20,6 +21,8 @@
   </div>
   
   <div class='dataClass'>
+    <button class='localStoreButton' (click)='saveToLocalStorage()'>Save Items To Local Storage</button>
+    <button class='localStoreButton' (click)='getFromLocalStorage()'>Pull Items From Local Storage</button>
     <!-- Shows each item, in a ul, that is in the current array-->
     <h3>Current Items</h3>
     <ul>

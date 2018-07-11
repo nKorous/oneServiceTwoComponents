@@ -26,4 +26,15 @@ export class Serv1Service {
      /*** Simply returns everything in the someList array ***/
      return this.someList
    }
+
+   toLocalStorage(data){
+    localStorage.setItem("items", JSON.stringify(data))
+   }
+
+   fromLocalStorage(){
+     let returnData = localStorage.getItem('items')
+
+      return JSON.parse(returnData)  
+
+   }
 }
