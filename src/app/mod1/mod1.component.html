@@ -1,0 +1,21 @@
+<div class='modClass'>
+  <span>ID:
+    <input type='number' [(ngModel)]='ID' placeholder='0'>
+  </span>
+  <span>Name: 
+    <input type='text' [(ngModel)]='name' placeholder='Darth Vader'>
+  </span>
+  <span>Description: 
+    <input type='text' [(ngModel)]='description' placeholder='Enter a description'>
+  </span>
+  <span><button class='submitButtonClass' (click)='sendItem(ID, name, description); getItems()'>Submit New Item</button></span>
+</div>
+
+<div class='dataClass'>
+  <h3>Current Items</h3>
+  <ul>
+    <li *ngFor='let x of items; let i = index'>
+      {{ i + 1 }}) ID: {{ x.ID }} -- Name: {{ x.name }} => Description: {{ x.description}}
+    </li>
+  </ul>
+</div>
